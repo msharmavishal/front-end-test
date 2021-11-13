@@ -4,11 +4,12 @@ import Home from "./containers/home"
 import Login from "./containers/login"
 
 function App() {
-  return (
+  return (<div style={{padding: 24}} >
     <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
+  </div>
   );
 }
 
