@@ -1,11 +1,13 @@
-const CityWeather = ({ loading, error, city, currentWeatherIcon, tempF, tempC, humidity }) => {
+const CityWeather = ({ loading, error, city, currentWeatherIcon, tempF, tempC, humidity, date, onClick, showCity = true }) => {
 
-    return <div style={{
-        padding: 20,
-        border: "1px solid",
-        borderRadius: 8
-    }} >
-        <p>{city}</p>
+    return <div
+        onClick={() => !!onClick && onClick()}
+        style={{
+            padding: 20,
+            border: "1px solid",
+            borderRadius: 8
+        }} >
+        {showCity ? <p>{city}</p> : <p>{date}</p>}
         {loading ? <p>Loading...</p> : <>
             <img src={currentWeatherIcon} alt="current weather" />
             <div>
