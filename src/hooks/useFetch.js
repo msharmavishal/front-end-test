@@ -19,7 +19,7 @@ const useFetch = (url) => {
         }
 
         fetchWeather()
-    }, [])
+    }, [url])
 
     return { loading, error, response }
 }
